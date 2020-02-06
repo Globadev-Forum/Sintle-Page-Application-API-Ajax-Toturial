@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Swashbuckle.Application;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,12 @@ namespace SPAToturial
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            SwaggerConfig.Register();
+
+            //GlobalConfiguration.Configuration
+            //  //.EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
+            //  .EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
+            //  .EnableSwaggerUi();
         }
     }
 }
